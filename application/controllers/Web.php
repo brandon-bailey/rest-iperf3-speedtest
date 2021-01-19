@@ -1,0 +1,67 @@
+<?php
+
+defined('BASEPATH') or exit('No direct script access allowed');
+
+class Web extends CI_Controller
+{
+    public function index()
+    {
+        //$this->load->helper('url');
+        $this->load->view('head');
+        $this->load->view('web-speedtest');
+        $this->load->view('footer');
+    }
+
+    public function empty()
+    {
+        header("HTTP/1.1 200 OK");
+        header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+        header("Cache-Control: post-check=0, pre-check=0", false);
+        header("Pragma: no-cache");
+        header("Connection: keep-alive");
+    }
+
+    public function garbage()
+    {
+        // Disable Compression
+        @ini_set('zlib.output_compression', 'Off');
+        @ini_set('output_buffering', 'Off');
+        @ini_set('output_handler', '');
+        // Headers
+        header('HTTP/1.1 200 OK');
+        header('Access-Control-Allow-Origin: *');
+        // Download follows...
+        header('Content-Description: File Transfer');
+        header('Content-Type: application/octet-stream');
+        header('Content-Disposition: attachment; filename=random.dat');
+        header('Content-Transfer-Encoding: binary');
+        // Never cache me
+        header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+        header('Cache-Control: post-check=0, pre-check=0', false);
+        header('Pragma: no-cache');
+        // Generate data
+        $data = openssl_random_pseudo_bytes(1048576);
+        // Deliver chunks of 1048576 bytes
+        $chunks = isset($_GET['ckSize']) ? intval($_GET['ckSize']) : 4;
+        if (empty($chunks)) {
+            $chunks = 4;
+        }
+        if ($chunks>100) {
+            $chunks = 100;
+        }
+        for ($i=0; $i<$chunks; $i++) {
+            echo $data;
+            flush();
+        }
+    }
+
+    public function getIp()
+    {
+        echo $_SERVER['REMOTE_ADDR'];
+    }
+
+    public function info()
+    {
+        phpinfo();
+    }
+}

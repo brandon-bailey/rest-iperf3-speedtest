@@ -1,0 +1,29 @@
+{
+  "name": "pocketfi",
+  "homepage": "https://rmrcom.com",
+  "license": "proprietary",
+  "description": "Web interface for POCKETFI project",
+  "private": true,
+  "authors": [
+    "Brandon Bailey"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "core/vendor",
+    "assets/vendor",
+    "assets/plugins",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "2.1.4",
+    "jquery-migrate": "1.4.0",
+    "jquery-ui": "^1.10.0",
+    "bootstrap": "3.3.6",
+    "jquery-validation": "^1.16.0",
+    "font-awesome": "^4.7.0",
+    "animate.css": "^3.5.2"
+  }
+}

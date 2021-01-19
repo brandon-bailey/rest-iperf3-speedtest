@@ -1,0 +1,118 @@
+sftp-config.json
+application/cache/*
+!application/cache/index.html
+!application/cache/.htaccess
+application/config/config.php
+
+error_log
+
+application/logs/*
+
+!application/logs/index.html
+!application/logs/.htaccess
+
+application/vendor/*
+
+application/config/database.php
+
+application/database/*
+!application/database/index.html
+
+
+assets/pocketspeed/run/*
+!assets/pocketspeed/run/.gitkeep
+assets/plugins/
+
+cgi-bin/*
+.well-known/*
+
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+/vendor/
+
+
+# just sane ignores
+.*.sw[po]
+*.bak
+*.BAK
+*~
+*.orig
+*.class
+.cvsignore
+Thumbs.db
+*.py[co]
+_darcs/*
+CVS/*
+.svn/*
+RCS/*
+*.backup*
+# kdevelop
+.kdev
+*.kdev4
+*.kate-swp
+
+# Lokalize
+*lokalize*
+
+# eclipse
+.project
+.settings
+
+# netbeans 
+nbproject
+
+# phpStorm
+.idea
+*.iml
+
+# geany
+*.geany
+
+# Cloud9IDE
+.settings.xml
+.c9revisions
+
+# vim ex mode
+.vimrc
+
+# ack(-grep)
+.ackrc
+	
+# Mac OS
+.DS_Store
+
+# WebFinger
+.well-known
+/.buildpath
+
+# Tests
+/tests/phpunit.xml
+
+# Node Modules
+/build/node_modules/
+
+# nodejs
+/build/lib/
+/build/jsdocs/
+/npm-debug.log
+
+# puphpet
+puphpet
+
+# vagrant
+.vagrant
+Vagrantfile
+
+# Tests - auto-generated files
+/data-autotest
+/tests/coverage*
+/tests/karma-coverage
+/tests/autoconfig*
+/tests/autotest*
+/tests/data/lorem-copy.txt
+/tests/data/testimage-copy.png
+/config/config-autotest-backup.php
+/config/autoconfig.php
+clover.xml

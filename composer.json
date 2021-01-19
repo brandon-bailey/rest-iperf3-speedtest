@@ -1,0 +1,47 @@
+{
+    "description": "Speedtest REST API",
+    "name": "brandon-bailey/rest-iperf3-speedtest",
+    "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "homepage": "https://github.com/brandon-bailey/rest-iperf3-speedtest",
+    "license": "MIT",
+    "authors": [
+    {
+        "name": "Brandon Bailey",
+        "email": "brandondanielbailey@gmail.com",
+        "homepage": "https://linkedin.com/in/brandondanielbailey",
+        "role": "Developer"
+    }],
+    "support":
+    {
+        "email": "brandondanielbailey@gmail.com",
+        "issues": "https://github.com/brandon-bailey/rest-iperf3-speedtest/issues",
+        "wiki": "https://github.com/brandon-bailey/rest-iperf3-speedtest/wikis"
+    },
+    "require":
+    {
+        "php": ">=7.0",
+        "monolog/monolog": "^1.21.0",
+        "geoip2/geoip2": "~2.0",    
+        "bshaffer/oauth2-server-php": "^1.9",
+        "hybridauth/hybridauth": "^2.8",
+        "maltyxx/restclient": "^2.2",
+        "webonyx/graphql-php": "^0.9.10",
+        "phpmailer/phpmailer": "~5.2",
+        "php-curl-class/php-curl-class": "^8.0"
+    },
+    "suggest":
+    {
+        "paragonie/random_compat": "Provides better randomness in PHP 5.x"
+    },
+    "require-dev":
+    {
+        "mikey179/vfsStream": "1.1.*",
+        "phpunit/phpunit": "4.* || 5.*"
+    },
+    "config":
+    {
+        "vendor-dir": "application/vendor"
+    }
+}
